@@ -1,5 +1,13 @@
 # File sharing application
 
+## Rails server locally note.
+
+* Pull from github
+* bundle install
+* Webpacker requires Node.js ">=10.17.0".
+* Need install Yarn.
+* `rails webpacker:install`
+
 Working list:
 - [x] Decide Rails and Ruby verison. Ruby 3.0.4 (2022-04-12) and Rails 6.1.6.1 (2022-07-12).
 - [x] Decide file upload framework. Choose [paperclip](https://www.ruby-toolbox.com/categories/rails_file_uploads).
