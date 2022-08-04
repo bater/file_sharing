@@ -3,6 +3,10 @@ class ItemsController < ApplicationController
 
   # GET /items/nano_id
   def show
+    if @item.expired?
+      @item.destroy
+      redirect_to new_item_url, notice: "Opps! It's expired."
+    end
   end
 
   # GET /items/new
@@ -14,12 +18,10 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
 
-    respond_to do |format|
-      if @item.save
-        format.html { redirect_to item_url(@item.nano_id), notice: "File upload successfully!" }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
+    if @item.save
+      redirect_to item_url(@item.nano_id), notice: "File upload successfully!"
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 

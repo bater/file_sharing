@@ -19,7 +19,7 @@ Working list:
 - [x] Two page app, one for upload and one for download.
 - [x] Provide a README with clear setup instructions.
 - [x] Sharing links should be hard to guess. ([nanoid](https://github.com/radeno/nanoid.rb))
-* Sharing links should expire.
+- [x] Sharing links should expire.
 * Have unit tests.
 
 ### What we don't do (scope out):

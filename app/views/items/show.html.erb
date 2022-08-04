@@ -4,4 +4,5 @@
   <strong>Download file</strong>
   <br>
   <%= link_to @item.file.filename, rails_blob_path(@item.file, disposition: 'attachment') %>
+  <p><%= "File expired time: #{@item.expired_time}" %></p>
 </p>
