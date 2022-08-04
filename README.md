@@ -1,43 +1,31 @@
 # File sharing application
 
-## Rails server locally note.
+## Application setup flow:
+* `git clone https://github.com/bater/file_sharing.git`
+* `cd file_shareing`
 
-* Pull from github
-* bundle install
-* Webpacker requires Node.js ">=10.17.0".
-* Need install Yarn.
+## Application profile:
+* Ruby 3.0.4 (2022-04-12) and Rails 6.1.6.1 (2022-07-12).
+* File storage solution: ([ActiveStorage](https://guides.rubyonrails.org/active_storage_overview.html))
+* Database
 
-Working list:
-- [x] Decide Rails and Ruby verison. Ruby 3.0.4 (2022-04-12) and Rails 6.1.6.1 (2022-07-12).
-- [x] File storage solution. ([ActiveStorage](https://guides.rubyonrails.org/active_storage_overview.html))
-- [x] Local server ready.
-- [ ] Basic web style template. (bootstrap)
-
-## Basic Requirements
-
+## Basic Requirements :school_satchel:
 - [x] A user can upload and share files.
 - [x] Two page app, one for upload and one for download.
 - [x] Provide a README with clear setup instructions.
 - [x] Sharing links should be hard to guess. ([nanoid](https://github.com/radeno/nanoid.rb))
 - [x] Sharing links should expire.
-* Have unit tests.
+- [ ] Have unit tests. (RSpec)
 
-### What we don't do (scope out):
-
-* User doesn't need to login.
-* Doesn't need download file list. (No file index or search funcion.)
-* Live app.
-
-## Good to have
-
+## Good to have :mortar_board:
 * Build by `docker` and `docker-compse`.
 * Download link should be short.
 * File validation. (Max file size and filename size.)
 * CI/CD.
 * When file not found (expired), redirect to index with flash.
+* Web Template and style.
 
-## Bonus
-
+## Bonus :fireworks:
 * Anti virus.
 * Feature test. (e2e testing)
 * Custom download link (readable link)
@@ -47,7 +35,9 @@ Working list:
 * js drop file upload.
 * Copy shared link to clipboard.
 * Business plan (profitable).
+* [Rubocop](https://github.com/rubocop/rubocop)
 
-## Reference
-
-* https://github.com/thoughtbot/paperclip
+## What we don't do (scope out) :-1:
+* User doesn't need to login.
+* Doesn't need a download file list. (No file index or search funcion.)
+* Live app. (by docker instead.)
