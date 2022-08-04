@@ -9,10 +9,9 @@
 
 Working list:
 - [x] Decide Rails and Ruby verison. Ruby 3.0.4 (2022-04-12) and Rails 6.1.6.1 (2022-07-12).
-- [x] Decide file upload framework. Choose [paperclip](https://www.ruby-toolbox.com/categories/rails_file_uploads).
+- [x] File storage solution. ([ActiveStorage](https://guides.rubyonrails.org/active_storage_overview.html))
 - [x] Local server ready.
 - [ ] Basic web style template. (bootstrap)
-- [ ] File storage solution.
 
 ## Basic Requirements
 
