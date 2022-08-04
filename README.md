@@ -15,12 +15,12 @@ Working list:
 
 ## Basic Requirements
 
-* A user can upload and share files,
-* Sharing links should be hard to guess,
+- [x] A user can upload and share files.
+- [x] Two page app, one for upload and one for download.
+- [x] Provide a README with clear setup instructions.
+* Sharing links should be hard to guess.
 * Sharing links should expire.
-* Two page app, one for upload and one for download.
 * Have unit tests.
-* Provide a README with clear setup instructions.
 
 ### What we don't do (scope out):
 
