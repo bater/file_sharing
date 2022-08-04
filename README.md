@@ -36,6 +36,7 @@
 * Copy shared link to clipboard.
 * Business plan (profitable).
 * [Rubocop](https://github.com/rubocop/rubocop)
+* [Test coverage](https://github.com/simplecov-ruby/simplecov)
 
 ## What we don't do (scope out) :-1:
 * User doesn't need to login.
