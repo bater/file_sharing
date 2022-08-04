@@ -12,39 +12,42 @@ Working list:
 - [x] Decide file upload framework. Choose [paperclip](https://www.ruby-toolbox.com/categories/rails_file_uploads).
 - [x] Local server ready.
 - [ ] Basic web style template. (bootstrap)
-- [ ] Heroku deploy.
 - [ ] File storage solution.
 
 ## Basic Requirements
 
 * A user can upload and share files,
 * Sharing links should be hard to guess,
-* Sharing links should expire. (uuid)
+* Sharing links should expire.
+* Two page app, one for upload and one for download.
 * Have unit tests.
-* SPA (single page application).
+* Provide a README with clear setup instructions.
 
-### What we don't do:
+### What we don't do (scope out):
 
 * User doesn't need to login.
-* Doesn't need download file list.
+* Doesn't need download file list. (No file index or search funcion.)
+* Live app.
 
 ## Good to have
 
+* Build by `docker` and `docker-compse`.
 * Download link should be short.
-* Host the application on Heroku.
-* File validation. (Max file size and file name.)
-* Copy shared link to clipboard.
-* Drop file upload.
+* File validation. (Max file size and filename size.)
 * CI/CD.
-* Feature test. (e2e testing)
-* Lower cost. (File storage cost.)
-* Mobile web (RWD).
 * When file not found (expired), redirect to index with flash.
 
 ## Bonus
 
-* Anti virus
+* Anti virus.
+* Feature test. (e2e testing)
 * Custom download link (readable link)
+* Lower cost. (File storage cost.)
+* Expire time countdown js animation.
+* Mobile view (RWD).
+* js drop file upload.
+* Copy shared link to clipboard.
+* Business plan (profitable).
 
 ## Reference
 
