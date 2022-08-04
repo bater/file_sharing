@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: :show
 
-  # GET /items/1 or /items/1.json
+  # GET /items/nano_id
   def show
   end
 
@@ -16,11 +16,9 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to item_url(@item), notice: "Item was successfully created." }
-        format.json { render :show, status: :created, location: @item }
+        format.html { redirect_to item_url(@item.nano_id), notice: "File upload successfully!" }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -28,7 +26,7 @@ class ItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
-      @item = Item.find(params[:id])
+      @item = Item.find_by(nano_id: params[:id])
     end
 
     # Only allow a list of trusted parameters through.
