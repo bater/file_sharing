@@ -21,7 +21,8 @@
 ## Good to have :mortar_board:
 - [ ] Build by `docker` and `docker-compse`.
 - [x] Download link should be short.
-- [ ] File validation. (Max file size and filename size.)
+- [x] File validation. (file size and content type.) ([Active Storage Validations](https://github.com/igorkasyanchuk/active_storage_validations))
+- [ ] Validate file presence.
 - [ ] CI/CD.
 - [x] When file not found (expired), redirect to index with flash.
 - [ ] Web Template and style.

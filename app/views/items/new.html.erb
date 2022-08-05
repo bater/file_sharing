@@ -1,4 +1,9 @@
 <h1>Upload file</h1>
 <p id="notice"><%= notice %></p>
-<p>The file will be expired after <%= distance_of_time_in_words(Time.now, Item::FILE_LIFE_TIME.ago) %>.</p>
 <%= render 'form', item: @item %>
+<p>Rule:</p>
+<ul>
+  <li>Only jpg, jpeg, png file allowed.</li>
+  <li>Max file size is 100 kb.</li>
+  <li>The file will be expired after <%= distance_of_time_in_words(Time.now, Item::FILE_LIFE_TIME.ago) %>.</li>
+</ul>

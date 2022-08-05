@@ -1,6 +1,10 @@
 class Item < ApplicationRecord
   has_one_attached :file
 
+  validates :file, attached: true,
+    size: { less_than: 100.kilobytes },
+    content_type: [:png, :jpg, :jpeg]
+
   before_create do |item|
     self.nano_id = Nanoid.generate
   end
