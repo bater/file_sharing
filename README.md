@@ -15,7 +15,7 @@
 - [x] Provide a README with clear setup instructions.
 - [x] Sharing links should be hard to guess. ([nanoid](https://github.com/radeno/nanoid.rb))
 - [x] Sharing links should expire.
-- [ ] Have unit tests. (RSpec)
+- [x] Have unit tests. (RSpec)
 
 ## Good to have :mortar_board:
 * Build by `docker` and `docker-compse`.
