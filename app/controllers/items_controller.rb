@@ -3,9 +3,11 @@ class ItemsController < ApplicationController
 
   # GET /items/nano_id
   def show
-    if @item.expired?
+    if @item.nil?
+      redirect_to root_url, notice: "Opps! File not found."
+    elsif @item.expired?
       @item.destroy
-      redirect_to new_item_url, notice: "Opps! It's expired."
+      redirect_to root_url, notice: "Opps! It's expired."
     end
   end
 
@@ -19,7 +21,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
 
     if @item.save
-      redirect_to show_url(@item.nano_id), notice: "File upload successfully!"
+      redirect_to show_url(@item.download_url), notice: "File upload successfully!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,10 +31,11 @@ class ItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find_by(nano_id: params[:id])
+      @item = Item.find_by(custom_url: params[:id]) if @item.nil?
     end
 
     # Only allow a list of trusted parameters through.
     def item_params
-      params.require(:item).permit(:file)
+      params.require(:item).permit(:file, :custom_url)
     end
 end

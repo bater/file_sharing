@@ -30,7 +30,7 @@
 ## Bonus :fireworks:
 - [ ] Anti virus.
 - [ ] Feature test. (e2e testing)
-- [ ] Custom download link (readable link)
+- [x] Custom download link (readable link)
 - [ ] Lower cost. (File storage cost.)
 - [ ] Expire time countdown js animation.
 - [ ] Mobile view (RWD).
