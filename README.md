@@ -8,6 +8,7 @@
 * Ruby 3.0.4 (2022-04-12) and Rails 6.1.6.1 (2022-07-12).
 * File storage solution: ([ActiveStorage](https://guides.rubyonrails.org/active_storage_overview.html))
 * Database
+* Test Framework: RSpec
 
 ## Basic Requirements :school_satchel:
 - [x] A user can upload and share files.
@@ -18,25 +19,25 @@
 - [x] Have unit tests. (RSpec)
 
 ## Good to have :mortar_board:
-* Build by `docker` and `docker-compse`.
-* Download link should be short.
-* File validation. (Max file size and filename size.)
-* CI/CD.
-* When file not found (expired), redirect to index with flash.
-* Web Template and style.
+- [ ] Build by `docker` and `docker-compse`.
+- [x] Download link should be short.
+- [ ] File validation. (Max file size and filename size.)
+- [ ] CI/CD.
+- [x] When file not found (expired), redirect to index with flash.
+- [ ] Web Template and style.
 
 ## Bonus :fireworks:
-* Anti virus.
-* Feature test. (e2e testing)
-* Custom download link (readable link)
-* Lower cost. (File storage cost.)
-* Expire time countdown js animation.
-* Mobile view (RWD).
-* js drop file upload.
-* Copy shared link to clipboard.
-* Business plan (profitable).
-* [Rubocop](https://github.com/rubocop/rubocop)
-* [Test coverage](https://github.com/simplecov-ruby/simplecov)
+- [ ] Anti virus.
+- [ ] Feature test. (e2e testing)
+- [ ] Custom download link (readable link)
+- [ ] Lower cost. (File storage cost.)
+- [ ] Expire time countdown js animation.
+- [ ] Mobile view (RWD).
+- [ ] js drop file upload.
+- [ ] Copy shared link to clipboard.
+- [ ] Business plan (profitable).
+- [ ] [Rubocop](https://github.com/rubocop/rubocop)
+- [ ] [Test coverage](https://github.com/simplecov-ruby/simplecov)
 
 ## What we don't do (scope out) :-1:
 * User doesn't need to login.

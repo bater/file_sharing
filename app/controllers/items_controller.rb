@@ -14,12 +14,12 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
-  # POST /items or /items.json
+  # POST /items
   def create
     @item = Item.new(item_params)
 
     if @item.save
-      redirect_to item_url(@item.nano_id), notice: "File upload successfully!"
+      redirect_to show_url(@item.nano_id), notice: "File upload successfully!"
     else
       render :new, status: :unprocessable_entity
     end
