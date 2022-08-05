@@ -22,7 +22,7 @@
 - [ ] Build by `docker` and `docker-compse`.
 - [x] Download link should be short.
 - [x] File validation. (file size and content type.) ([Active Storage Validations](https://github.com/igorkasyanchuk/active_storage_validations))
-- [ ] Validate file presence.
+- [x] Validate file presence.
 - [ ] CI/CD.
 - [x] When file not found (expired), redirect to index with flash.
 - [ ] Web Template and style.
