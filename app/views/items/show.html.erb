@@ -3,6 +3,9 @@
 <p>
   <strong>Download file</strong>
   <br>
-  <%= link_to @item.file.filename, rails_blob_path(@item.file, disposition: 'attachment') %>
-  <p><%= "File expired time: #{@item.expired_time}" %></p>
+  <%= "Filename: #{@item.file.filename}" %>
+  <br>
+  <%= link_to 'Download', rails_blob_path(@item.file, disposition: 'attachment') %>
+  <p>This file will be expired after <%= distance_of_time_in_words(Time.now, @item.expired_time) %>.</p>
+  <%= link_to "Upload next file", root_path %>
 </p>

@@ -1,4 +1,4 @@
 <h1>Upload file</h1>
 <p id="notice"><%= notice %></p>
-
+<p>The file will be expired after <%= distance_of_time_in_words(Time.now, Item::FILE_LIFE_TIME.ago) %>.</p>
 <%= render 'form', item: @item %>

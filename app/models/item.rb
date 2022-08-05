@@ -5,7 +5,7 @@ class Item < ApplicationRecord
     self.nano_id = Nanoid.generate
   end
 
-  FILE_LIFE_TIME = 10.minute
+  FILE_LIFE_TIME = 5.minute
 
   def expired?
     FILE_LIFE_TIME.ago > created_at
