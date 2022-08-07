@@ -25,7 +25,7 @@ class Item < ApplicationRecord
   end
 
   def expired_after
-    "#{(elapsed / 60).to_i}:#{(elapsed % 60).to_i}"
+    "#{(elapsed / 60).to_s.rjust(2,'0')}:#{(elapsed % 60).to_s.rjust(2,'0')}"
   end
 
   def download_url
