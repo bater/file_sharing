@@ -7,7 +7,7 @@
   <br>
   <%= link_to 'Download', rails_blob_path(@item.file, disposition: 'attachment') %>
   <p>You can copy this link and share with your friends.</p>
-  <%= "#{request.base_url}/#{@item.download_url}" %>
-  <p id='remain-text'>This file will be expired after <span id='time' data-remain='<%= @item.remain_seconds %>'><%= @item.expired_after %></span>.</p>
+  <%= "#{request.base_url}/#{@item.download_key}" %>
+  <p id='remain-text'>This file will be expired after <%= remain_time(@item) %>.</p>
   <%= link_to "Upload next file", root_path %>
 </p>

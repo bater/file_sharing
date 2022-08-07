@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
 
     if @item.save
-      redirect_to show_url(@item.download_url), notice: "File upload successfully!"
+      redirect_to show_url(@item.download_key), notice: "File upload successfully!"
     else
       render :new, status: :unprocessable_entity
     end

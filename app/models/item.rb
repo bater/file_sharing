@@ -32,7 +32,7 @@ class Item < ApplicationRecord
     "#{(remain_seconds / 60).to_s.rjust(2,'0')}:#{(remain_seconds % 60).to_s.rjust(2,'0')}"
   end
 
-  def download_url
+  def download_key
     custom_url.presence || nano_id
   end
 end
