@@ -32,7 +32,7 @@
 - [ ] Web Template and style.
 
 ## Bonus :fireworks:
-- [ ] Anti virus.
+- [ ] Anti virus. [Clamby](https://github.com/kobaltz/clamby)
 - [ ] Feature test. (e2e testing)
 - [x] Custom download link (readable link)
 - [ ] Lower cost. (File storage cost.)
