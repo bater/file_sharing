@@ -7,7 +7,7 @@
 ## Application profile:
 * Ruby 3.0.4 (2022-04-12) and Rails 6.1.6.1 (2022-07-12).
 * File storage solution: ([ActiveStorage](https://guides.rubyonrails.org/active_storage_overview.html))
-* Database
+* Database: postgresql
 * Test Framework: RSpec
 
 ## Basic Requirements :school_satchel:
