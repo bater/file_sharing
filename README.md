@@ -32,7 +32,7 @@
 - [ ] Feature test. (e2e testing)
 - [x] Custom download link (readable link)
 - [ ] Lower cost. (File storage cost.)
-- [ ] Expire time countdown js animation.
+- [x] Expire time countdown js.
 - [ ] Mobile view (RWD).
 - [ ] js drop file upload.
 - [ ] Copy shared link to clipboard.

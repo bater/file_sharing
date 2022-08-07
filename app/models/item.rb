@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  FILE_LIFE_TIME = 30.minute
+  FILE_LIFE_TIME = 5.minute
   FILE_CONTEN_TYPE = %i[png jpg jpeg].freeze
   MAX_FILE_SIZE = 100.kilobytes
 
@@ -18,6 +18,14 @@ class Item < ApplicationRecord
 
   def expired_time
     created_at + FILE_LIFE_TIME
+  end
+
+  def elapsed
+    (expired_time - Time.now).to_i
+  end
+
+  def expired_after
+    "#{(elapsed / 60).to_i}:#{(elapsed % 60).to_i}"
   end
 
   def download_url
