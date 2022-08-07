@@ -3,6 +3,10 @@
 ## Application setup flow:
 * `git clone https://github.com/bater/file_sharing.git`
 * `cd file_shareing`
+* `bundle install`
+* `rails db:migrate`
+* `rails server`
+* Visit browser `localhost:3000`.
 
 ## Application profile:
 * Ruby 3.0.4 (2022-04-12) and Rails 6.1.6.1 (2022-07-12).
