@@ -6,7 +6,11 @@ class Item < ApplicationRecord
   has_one_attached :file
 
   validates :file, attached: true, size: { less_than: MAX_FILE_SIZE }, content_type: FILE_CONTEN_TYPE
-  validates :custom_url, uniqueness: true
+  validates :custom_url, uniqueness: true, allow_nil: true
+
+  before_validation do |item|
+    self.custom_url = custom_url.presence
+  end
 
   before_create do |item|
     self.nano_id = Nanoid.generate
