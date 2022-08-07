@@ -1,15 +1,18 @@
 function startTimer(duration, display) {
   var timer = duration, minutes, seconds;
-  setInterval(function () {
+  var looper = setInterval(frame, 1000);
+  function frame() {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
     display.textContent = stringRjust(minutes) + ":" + stringRjust(seconds);
 
     if (--timer < 0) {
-      timer = duration;
+      clearInterval(looper);
+      document.getElementById('remain-text').innerHTML = "Time`s up! Redirct to indext now.";
+      window.location.href = '/';
     }
-  }, 1000);
+  }
 }
 
 function stringRjust(int) {
