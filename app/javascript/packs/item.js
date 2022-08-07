@@ -18,7 +18,7 @@ function startTimer(duration, display) {
 window.onload = function () {
   var display = document.querySelector('#time');
   if (display != null) {
-    var duration = parseInt(display.dataset.elapsed, 10);
+    var duration = parseInt(display.dataset.remain, 10);
     startTimer(duration, display);
   }
 };

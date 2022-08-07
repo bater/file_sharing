@@ -24,12 +24,12 @@ class Item < ApplicationRecord
     created_at + FILE_LIFE_TIME
   end
 
-  def elapsed
+  def remain_seconds
     (expired_time - Time.now).to_i
   end
 
   def expired_after
-    "#{(elapsed / 60).to_s.rjust(2,'0')}:#{(elapsed % 60).to_s.rjust(2,'0')}"
+    "#{(remain_seconds / 60).to_s.rjust(2,'0')}:#{(remain_seconds % 60).to_s.rjust(2,'0')}"
   end
 
   def download_url
