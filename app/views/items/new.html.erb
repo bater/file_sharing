@@ -3,7 +3,7 @@
 <%= render 'form', item: @item %>
 <p>Rule:</p>
 <ul>
-  <li>Only jpg, jpeg, png file allowed.</li>
-  <li>Max file size is 100 kb.</li>
+  <li>Only <%= Item::FILE_CONTEN_TYPE.join(', ') %> file allowed.</li>
+  <li>Max file size is <%= number_to_human_size(Item::MAX_FILE_SIZE) %>.</li>
   <li>The file will be expired after <%= distance_of_time_in_words(Time.now, Item::FILE_LIFE_TIME.ago) %>.</li>
 </ul>

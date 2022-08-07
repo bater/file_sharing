@@ -1,16 +1,16 @@
 class Item < ApplicationRecord
+  FILE_LIFE_TIME = 30.minute
+  FILE_CONTEN_TYPE = %i[png jpg jpeg].freeze
+  MAX_FILE_SIZE = 100.kilobytes
+
   has_one_attached :file
 
-  validates :file, attached: true,
-    size: { less_than: 100.kilobytes },
-    content_type: [:png, :jpg, :jpeg]
+  validates :file, attached: true, size: { less_than: MAX_FILE_SIZE }, content_type: FILE_CONTEN_TYPE
   validates :custom_url, uniqueness: true
 
   before_create do |item|
     self.nano_id = Nanoid.generate
   end
-
-  FILE_LIFE_TIME = 5.minute
 
   def expired?
     FILE_LIFE_TIME.ago > created_at
